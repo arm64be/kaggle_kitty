@@ -15,7 +15,7 @@ def _init_hf_token():
 
             user_secrets = UserSecretsClient()
             os.environ["HF_TOKEN"] = user_secrets.get_secret("HF_TOKEN")
-        except ImportError:
+        except Exception:
             pass
 
 
